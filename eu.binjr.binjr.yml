@@ -15,7 +15,7 @@ modules:
   - name: binjr
     buildsystem: simple
     build-commands:
-      - source /usr/lib/sdk/openjdk25/enable.sh && export JFX_JMOD_PATH='jfx/jmods'; export REPO_TAG_NAME=v3.27.0; export IS_TAG=true; export USE_BUILD_JDK_IN_BUNDLE=true; gradle clean jpackageLinuxFlatpak --offline --stacktrace
+      - source /usr/lib/sdk/openjdk25/enable.sh && export JFX_JMOD_PATH='jfx/jmods'; export REPO_TAG_NAME=v3.28.0-SNAPSHOT; export IS_TAG=true; export USE_BUILD_JDK_IN_BUNDLE=true; gradle clean jpackageLinuxFlatpak --offline --stacktrace
       - cp -ar build/flatpak/binjr/* /app/
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_16.png /app/share/icons/hicolor/16x16/apps/eu.binjr.binjr.png
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_32.png /app/share/icons/hicolor/32x32/apps/eu.binjr.binjr.png
@@ -24,27 +24,32 @@ modules:
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_128.png /app/share/icons/hicolor/128x128/apps/eu.binjr.binjr.png
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_256.png /app/share/icons/hicolor/256x256/apps/eu.binjr.binjr.png
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_512.png /app/share/icons/hicolor/512x512/apps/eu.binjr.binjr.png
-      - install -Dm644 distribution/bundlers/linux_fpk/metadata/eu.binjr.binjr.metainfo.xml /app/share/metainfo/eu.binjr.binjr.metainfo.xml
+      - install -Dm644 build/tmp/expanded/eu.binjr.binjr.metainfo.xml /app/share/metainfo/eu.binjr.binjr.metainfo.xml
       - install -Dm644 distribution/bundlers/linux_fpk/metadata/eu.binjr.binjr.mime.xml /app/share/mime/packages/eu.binjr.binjr.mime.xml
       - install -Dm644 distribution/bundlers/linux_fpk/metadata/eu.binjr.binjr.desktop -t /app/share/applications
     sources:
       - type: git
         url: https://github.com/binjr/binjr.git
-        tag: v3.27.0
+        tag: v3.28.0-SNAPSHOT
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/25/openjfx-25_linux-x64_bin-jmods.zip
-        sha256: 96e520f48610d8ffb94ca30face1f11ffe8a977ddc1c4ff80b1a9e9f048bd94e
-        strip-components: 0
+        url: https://download2.gluonhq.com/openjfx/25.0.2/openjfx-25.0.2_linux-x64_bin-jmods.zip
+        sha256: e0a9c29d8cf3af9b8b48848b43f87b5785bc107c53a951b19668ce05842bba1b
+        strip-components: 1
         dest: "jfx/jmods/"
         only-arches:
         - x86_64
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/25/openjfx-25_linux-aarch64_bin-jmods.zip
-        sha256: 9ad4ca7b769ca4ee6419f1e99143dd6ff812f8be4fddb46a7d7cacbeea148af4
-        strip-components: 0
+        url: https://download2.gluonhq.com/openjfx/25.0.2/openjfx-25.0.2_linux-aarch64_bin-jmods.zip
+        sha256: c3408f818693cce09e59829a8e862a82c7695fdfcd585c41cfd527f5fc3fe646
+        strip-components: 1
         dest: "jfx/jmods/"
         only-arches:
         - aarch64
-      - binjr-plugins-sources.json
-      - binjr-app-sources.json
+      - type: file
+        url: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.130.Final/netty-bom-4.1.130.Final.pom
+        sha512: cb4a8b3fc9419b3d9c1d829a4abed446034dc0ca56c75ff6dfaf4d03809e89087bea619c7451f6a666119b1256391c59f82b0a60d22609d35b6d15acc1dcf8bf
+        dest: ./offline-repository/io/netty/netty-bom/4.1.130.Final
+      - bom-gradle-plugins.json
+      - bom-binjr-app-linux-x86_64.json
+      - bom-binjr-app-linux-x86_64.json
 

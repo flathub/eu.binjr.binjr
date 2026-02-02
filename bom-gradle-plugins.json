@@ -281,6 +281,13 @@
   },
   {
     "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-osgi-bundle/2.0.21/kotlin-osgi-bundle-2.0.21.pom",
+    "sha512": "90267c8d21d21ed76bfda0b38db27cbd1f062ae1457a279b0f09b88e2b1cd924ab15bf94e2ad221caefe27ac16695778f48bae2070c2e3945469cc3e8c31b5bb",
+    "dest": "./offline-repository/org/jetbrains/kotlin/kotlin-osgi-bundle/2.0.21",
+    "dest-filename": "kotlin-osgi-bundle-2.0.21.pom"
+  },
+  {
+    "type": "file",
     "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/2.0.21/kotlin-reflect-2.0.21.jar",
     "sha512": "3b35fb5684bc7cad47a5c068b2671ae55cabe6ca16745277ac44ce0785b1384ad35444fbe10b68ca7c360ba9a86b0061a6101956b370e6c19bd8c85c9bc13dcd",
     "dest": "./offline-repository/org/jetbrains/kotlin/kotlin-reflect/2.0.21",
@@ -348,6 +355,13 @@
     "sha512": "334cb373424c369215261f639a57fef1b9780ed705af93c1c3e9ec074f6a9dfb3269d480bec841ca89dc990df11cd72ff09174cb43e54fdadf962f1a9f40afdc",
     "dest": "./offline-repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/2.0.21",
     "dest-filename": "kotlin-stdlib-jdk8-2.0.21.pom"
+  },
+  {
+    "type": "file",
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-js/2.0.21/kotlin-stdlib-js-2.0.21.pom",
+    "sha512": "010d92e4558304d66934d4d717ff0eee06a1b5ba138fa6a7e1dd754a4cc2a050cd91abb238ca7117578402138cbad3a5f10f16ad4b4ad3eaf81c695562a907f6",
+    "dest": "./offline-repository/org/jetbrains/kotlin/kotlin-stdlib-js/2.0.21",
+    "dest-filename": "kotlin-stdlib-js-2.0.21.pom"
   },
   {
     "type": "file",

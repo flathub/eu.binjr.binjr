@@ -176,31 +176,31 @@
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/io/github/ben-manes/gradle-versions-plugin/0.56.0/gradle-versions-plugin-0.56.0.jar",
-    "sha512": "68d23abe7f65589e95d3d1d8176e6f5ce71129f5d2b42339c3f473b146afd57a47a7fbb6a9ef6b77e0964be620d77ac15f4581165b105a6da945c14b00fcaccf",
-    "dest": "./offline-repository/io/github/ben-manes/gradle-versions-plugin/0.56.0",
-    "dest-filename": "gradle-versions-plugin-0.56.0.jar"
+    "url": "https://plugins.gradle.org/m2/io/github/ben-manes/gradle-versions-plugin/0.61.0/gradle-versions-plugin-0.61.0.jar",
+    "sha512": "5154fa8b9d89a73b0834f0fb1b54429aa65c0ab2f52df8ed3cc5e298de2f81fbf748ab056799965615b97ca1b56d2d6cc38fbca9085387382de3bd2f43480198",
+    "dest": "./offline-repository/io/github/ben-manes/gradle-versions-plugin/0.61.0",
+    "dest-filename": "gradle-versions-plugin-0.61.0.jar"
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/io/github/ben-manes/gradle-versions-plugin/0.56.0/gradle-versions-plugin-0.56.0.module",
-    "sha512": "d892599b10f7911c132d139061b67b8970c9a17a0e6f130175fb42034930689f24fc2295b205ec4f45e276d9aee59ddae256ed191ee562eb5958297cb2e0283f",
-    "dest": "./offline-repository/io/github/ben-manes/gradle-versions-plugin/0.56.0",
-    "dest-filename": "gradle-versions-plugin-0.56.0.module"
+    "url": "https://plugins.gradle.org/m2/io/github/ben-manes/gradle-versions-plugin/0.61.0/gradle-versions-plugin-0.61.0.module",
+    "sha512": "ae271f13983c99139aea63e5625328b0799504922fabfb7384cd7b475659d49f1208c50148d57743ed2d4db2afd00c0b61d6c8040be8a49ee6c8eb2b7b30143c",
+    "dest": "./offline-repository/io/github/ben-manes/gradle-versions-plugin/0.61.0",
+    "dest-filename": "gradle-versions-plugin-0.61.0.module"
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/io/github/ben-manes/gradle-versions-plugin/0.56.0/gradle-versions-plugin-0.56.0.pom",
-    "sha512": "df5d4f3c231c15e591fe52513f1850b60d3549203dfcf8cf14ceccf5a869bed856ca68a3bd968f27c9c1e582c9d88eb1ada252fe34e306d5fde4c28bdd898a82",
-    "dest": "./offline-repository/io/github/ben-manes/gradle-versions-plugin/0.56.0",
-    "dest-filename": "gradle-versions-plugin-0.56.0.pom"
+    "url": "https://plugins.gradle.org/m2/io/github/ben-manes/gradle-versions-plugin/0.61.0/gradle-versions-plugin-0.61.0.pom",
+    "sha512": "d1d8ccb5bf801b5a55efc000f07efe2974b344ec7475d52c635366e3bc681162198907599626e0ea8c5eb1d12509f9914f0896ccd92c152d84a77710c482f31e",
+    "dest": "./offline-repository/io/github/ben-manes/gradle-versions-plugin/0.61.0",
+    "dest-filename": "gradle-versions-plugin-0.61.0.pom"
   },
   {
     "type": "file",
-    "url": "https://plugins.gradle.org/m2/io/github/ben-manes/versions/io.github.ben-manes.versions.gradle.plugin/0.56.0/io.github.ben-manes.versions.gradle.plugin-0.56.0.pom",
-    "sha512": "6d4b30a27615727f32f9171b2f978a76f64e118e531e569c0a1137304a02ce993ef9af86b3e1cc0a0cb2a0f7fb065bc68eb4d5f3879a02b7d95a90fa9917ff1b",
-    "dest": "./offline-repository/io/github/ben-manes/versions/io.github.ben-manes.versions.gradle.plugin/0.56.0",
-    "dest-filename": "io.github.ben-manes.versions.gradle.plugin-0.56.0.pom"
+    "url": "https://plugins.gradle.org/m2/io/github/ben-manes/versions/io.github.ben-manes.versions.gradle.plugin/0.61.0/io.github.ben-manes.versions.gradle.plugin-0.61.0.pom",
+    "sha512": "8487991d460bb9ca40cf81c36627be0e0a7e497af4be249084a5a29b6d7129f9e2b6da109056df2df37806835462de5a3676d36b9e3f79996e81710d8ff70f4b",
+    "dest": "./offline-repository/io/github/ben-manes/versions/io.github.ben-manes.versions.gradle.plugin/0.61.0",
+    "dest-filename": "io.github.ben-manes.versions.gradle.plugin-0.61.0.pom"
   },
   {
     "type": "file",

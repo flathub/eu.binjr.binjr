@@ -16,7 +16,7 @@ modules:
   - name: binjr
     buildsystem: simple
     build-commands:
-      - source /usr/lib/sdk/openjdk/enable.sh && export JFX_JMOD_PATH='jfx/jmods'; export REPO_TAG_NAME=v3.30.0; export IS_TAG=true; export USE_BUILD_JDK_IN_BUNDLE=true; gradle clean jpackageLinuxFlatpak --offline --stacktrace
+      - source /usr/lib/sdk/openjdk/enable.sh && export JFX_JMOD_PATH='jfx/jmods'; export REPO_TAG_NAME=v3.30.1; export IS_TAG=true; export USE_BUILD_JDK_IN_BUNDLE=true; gradle clean jpackageLinuxFlatpak --offline --stacktrace
       - cp -ar build/flatpak/binjr/* /app/
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_16.png /app/share/icons/hicolor/16x16/apps/eu.binjr.binjr.png
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_32.png /app/share/icons/hicolor/32x32/apps/eu.binjr.binjr.png
@@ -31,7 +31,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/binjr/binjr.git
-        tag: v3.30.0
+        tag: v3.30.1
       - type: archive
         url: https://download2.gluonhq.com/openjfx/26.0.2/openjfx-26.0.2_linux-x64_bin-jmods.zip
         sha256: 7c32eee96c4f992cea43cecee77420a660478ee2776f0b7475e03fb40cbfae84

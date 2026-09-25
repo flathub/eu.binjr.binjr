@@ -16,7 +16,7 @@ modules:
   - name: binjr
     buildsystem: simple
     build-commands:
-      - source /usr/lib/sdk/openjdk/enable.sh && export JFX_JMOD_PATH='jfx/jmods'; export REPO_TAG_NAME=v3.30.0-SNAPSHOT; export IS_TAG=true; export USE_BUILD_JDK_IN_BUNDLE=true; gradle clean jpackageLinuxFlatpak --offline --stacktrace
+      - source /usr/lib/sdk/openjdk/enable.sh && export JFX_JMOD_PATH='jfx/jmods'; export REPO_TAG_NAME=v3.31.0-SNAPSHOT; export IS_TAG=true; export USE_BUILD_JDK_IN_BUNDLE=true; gradle clean jpackageLinuxFlatpak --offline --stacktrace
       - cp -ar build/flatpak/binjr/* /app/
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_16.png /app/share/icons/hicolor/16x16/apps/eu.binjr.binjr.png
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_32.png /app/share/icons/hicolor/32x32/apps/eu.binjr.binjr.png
@@ -31,25 +31,21 @@ modules:
     sources:
       - type: git
         url: https://github.com/binjr/binjr.git
-        tag: v3.30.0-SNAPSHOT
+        tag: v3.31.0-SNAPSHOT
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/26.0.2/openjfx-26.0.2_linux-x64_bin-jmods.zip
-        sha256: 7c32eee96c4f992cea43cecee77420a660478ee2776f0b7475e03fb40cbfae84
+        url: https://download2.gluonhq.com/openjfx/27/openjfx-27_linux-x64_bin-jmods.zip
+        sha256: ea169b02460a38a2b44acf595e28c7abd3d1ab23075e4b03f324ebaf33920c5b
         strip-components: 1
         dest: "jfx/jmods/"
         only-arches:
         - x86_64
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/26.0.2/openjfx-26.0.2_linux-aarch64_bin-jmods.zip
-        sha256: 6e4ece7e26e70780043c9e8e560b764252179b6497e3eded113aa02f95be73a8
+        url: https://download2.gluonhq.com/openjfx/27/openjfx-27_linux-aarch64_bin-jmods.zip
+        sha256: e8429f87d4f659821b85534f1dc9f72bf01b3298d0796615d2e63802bdaaf16a
         strip-components: 1
         dest: "jfx/jmods/"
         only-arches:
         - aarch64
-      - type: file
-        url: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.136.Final/netty-bom-4.1.136.Final.pom
-        sha512: 3ffe5e0f3e86fda569f7ca72650153065aca9d60c64ae820c50322406c3de0a12f042f2baf7866f8571033a3bdcf76515218c0b640f510ea074cff0970c6bbb8
-        dest: ./offline-repository/io/netty/netty-bom/4.1.136.Final
       - bom-gradle-plugins.json
       - bom-binjr-app-linux-x86_64.json
       - bom-binjr-app-linux-aarch64.json

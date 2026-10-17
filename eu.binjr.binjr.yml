@@ -32,6 +32,7 @@ modules:
       - type: git
         url: https://github.com/binjr/binjr.git
         tag: v3.31.0-SNAPSHOT
+        commit: 7f81aaf187c21625240e7be240c6c285b15f9c7a
       - type: archive
         url: https://download2.gluonhq.com/openjfx/27/openjfx-27_linux-x64_bin-jmods.zip
         sha256: ea169b02460a38a2b44acf595e28c7abd3d1ab23075e4b03f324ebaf33920c5b

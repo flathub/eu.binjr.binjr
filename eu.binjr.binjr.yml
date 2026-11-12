@@ -3,7 +3,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.openjdk
+  - org.freedesktop.Sdk.Extension.openjdk25
 
 command: binjr
 finish-args:
@@ -16,7 +16,7 @@ modules:
   - name: binjr
     buildsystem: simple
     build-commands:
-      - source /usr/lib/sdk/openjdk/enable.sh && export JFX_JMOD_PATH='jfx/jmods'; export REPO_TAG_NAME=v3.31.0-SNAPSHOT; export IS_TAG=true; export USE_BUILD_JDK_IN_BUNDLE=true; gradle clean jpackageLinuxFlatpak --offline --stacktrace
+      - source /usr/lib/sdk/openjdk25/enable.sh && export JFX_JMOD_PATH='jfx/jmods'; export REPO_TAG_NAME=v3.32.0-SNAPSHOT; export IS_TAG=true; export USE_BUILD_JDK_IN_BUNDLE=true; gradle clean jpackageLinuxFlatpak --offline --stacktrace
       - cp -ar build/flatpak/binjr/* /app/
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_16.png /app/share/icons/hicolor/16x16/apps/eu.binjr.binjr.png
       - install -Dm644 distribution/bundlers/linux_fpk/icons/binjr_32.png /app/share/icons/hicolor/32x32/apps/eu.binjr.binjr.png
@@ -31,18 +31,17 @@ modules:
     sources:
       - type: git
         url: https://github.com/binjr/binjr.git
-        tag: v3.31.0-SNAPSHOT
-        commit: 7f81aaf187c21625240e7be240c6c285b15f9c7a
+        commit: 9fc784348e8294d875d73b5068f0c7a6981e3e8d
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/27/openjfx-27_linux-x64_bin-jmods.zip
-        sha256: ea169b02460a38a2b44acf595e28c7abd3d1ab23075e4b03f324ebaf33920c5b
+        url: https://download2.gluonhq.com/openjfx/27.0.1/openjfx-27.0.1_linux-x64_bin-jmods.zip
+        sha256: 323ceb45b938485f6921d7c31c994cc649adb1f75b16192580ff84a3119694ba
         strip-components: 1
         dest: "jfx/jmods/"
         only-arches:
         - x86_64
       - type: archive
-        url: https://download2.gluonhq.com/openjfx/27/openjfx-27_linux-aarch64_bin-jmods.zip
-        sha256: e8429f87d4f659821b85534f1dc9f72bf01b3298d0796615d2e63802bdaaf16a
+        url: https://download2.gluonhq.com/openjfx/27.0.1/openjfx-27.0.1_linux-aarch64_bin-jmods.zip
+        sha256: 0cc7436da8f57452370ea6ec47132b5111c1866efa1e384277e5d18824440fb2
         strip-components: 1
         dest: "jfx/jmods/"
         only-arches:
